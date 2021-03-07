@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { PageLanding } from "../components/PageLanding";
+import { LandingPage } from "../components/LandingPage";
 
 export default function Home() {
     return (
@@ -8,7 +8,7 @@ export default function Home() {
                 <title>Pokédex | Home</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <PageLanding />
+            <LandingPage />
         </div>
     );
 }
