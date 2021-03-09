@@ -1,0 +1,115 @@
+.pokeballSm,
+.pokeballMd,
+.pokeballLg {
+    @apply relative bg-cadet-blue
+}
+.pokeballSm::before,
+.pokeballMd::before,
+.pokeballLg::before {
+    @apply w-full absolute bg-white-default
+}
+.pokeballSm::after,
+.pokeballMd::after,
+.pokeballLg::after {
+    @apply absolute bg-cadet-blue border-white-default
+}
+.pokeballSm {
+    @apply w-16 h-16
+}
+.pokeballSm::before {
+    @apply h-1.5
+}
+.pokeballSm.mountain-meadow::before {
+    @apply bg-mountain-meadow
+}
+.pokeballSm.cinnabar::before {
+    @apply bg-cinnabar
+}
+.pokeballSm.indigo::before {
+    @apply bg-indigo
+}
+.pokeballSm.buttercup::before {
+    @apply bg-buttercup
+}
+.pokeballSm.trendy-pink::before {
+    @apply bg-trendy-pink
+}
+.pokeballSm.coral-tree::before {
+    @apply bg-coral-tree
+}
+.pokeballSm::after {
+    @apply w-8 h-8 top-4 left-4
+}
+.pokeballSm.mountain-meadow::after {
+    @apply border-mountain-meadow
+}
+.pokeballSm.cinnabar::after {
+    @apply border-cinnabar
+}
+.pokeballSm.indigo::after {
+    @apply border-indigo
+}
+.pokeballSm.buttercup::after {
+    @apply border-buttercup
+}
+.pokeballSm.trendy-pink::after {
+    @apply border-trendy-pink
+}
+.pokeballSm.coral-tree::after{
+    @apply border-coral-tree
+}
+.pokeballMd {
+    @apply w-32 h-32
+}
+.pokeballMd::before {
+    @apply h-2
+}
+.pokeballMd::after {
+    @apply w-14 h-14 top-9 left-9 border-8
+}
+.pokeballLg {
+    @apply w-48 h-48
+}
+.pokeballLg::before {
+    @apply h-4
+}
+
+@layer utilities {
+    .pokeballSm,
+    .pokeballMd,
+    .pokeballLg {
+        border-radius: 50%;
+        &:before,
+        &:after {
+            content: '';
+        }
+        &:after {
+            border-radius: 50%;
+        }
+    }
+    .pokeballSm {
+        &:before {
+            top: calc((64px / 2) - (4px / 2));
+        }
+        &:after {
+            border-width: .375rem;
+        }
+    }
+    .pokeballMd {
+        &:before {
+            top: calc((128px / 2) - (8px / 2));
+        }
+    }
+    .pokeballLg {
+        &:before {
+            top: calc((192px / 2) - (16px / 2));
+        }
+        &:after {
+            height: 84px;
+            width: 84px;
+            border-width: 1rem;
+            top: calc((192px / 2) - (84px / 2));
+            left: calc((192px / 2) - (84px / 2));
+        }
+    }
+}
