@@ -1,8 +1,11 @@
+.contentContainer .dots {
+    @apply absolute grid grid-cols-4 gap-3 opacity-20 -top-1 left-3 transform rotate-45
+}
 .contentContainer .upLayerContainer {
     @apply bg-white-default rounded-b-3xl py-16 p-6
 }
 .contentContainer .pokeballContainer {
-    @apply absolute right-6 -top-2 opacity-20
+    @apply absolute right-6 -top-4 opacity-20
 }
 .contentContainer .upLayerContainer .titleContainer {
     @apply pt-10
@@ -22,17 +25,17 @@
 .contentContainer .upLayerContainer .gridContainer {
     @apply grid grid-cols-2 gap-3 mt-10
 }
-.contentContainer .upLayerContainer .gridContainer a {
-    @apply flex items-center p-4 w-full h-20 rounded-3xl relative transition-all duration-200 ease-in-out cursor-pointer
+.contentContainer .upLayerContainer .gridContainer a.cardOption {
+    @apply flex items-center p-4 w-full h-20 rounded-3xl relative transition-all duration-200 ease-in-out cursor-pointer overflow-hidden opacity-80 hover:opacity-100
 }
-.contentContainer .upLayerContainer .gridContainer a h4 {
+.contentContainer .upLayerContainer .gridContainer a.cardOption .rectangleContainer {
+    @apply absolute top-0 left-0 opacity-20
+}
+.contentContainer .upLayerContainer .gridContainer a.cardOption h4 {
     @apply text-white-default text-base font-bold
 }
-.contentContainer .upLayerContainer .gridContainer a .cardPokeball {
-    @apply absolute -right-2 opacity-20
-}
-.contentContainer .upLayerContainer .gridContainer .cardOption {
-    @apply opacity-80 hover:opacity-100
+.contentContainer .upLayerContainer .gridContainer a.cardOption .cardPokeball {
+    @apply absolute -right-2 opacity-40
 }
 .contentContainer .newsContainer {
     @apply py-8 p-6
@@ -44,10 +47,10 @@
     @apply text-lg font-bold mb-2
 }
 .contentContainer .newsContainer .newsTitle a {
-    @apply text-indigo opacity-80 hover:opacity-100 transition-all duration-200 ease-in-out
+    @apply text-indigo opacity-80 cursor-pointer hover:opacity-100 transition-all duration-200 ease-in-out
 }
 .contentContainer .newsContainer .newsItem {
-    @apply w-full flex items-center justify-between mt-4
+    @apply w-full flex items-center justify-between mt-4 cursor-pointer transition-all duration-200 ease-out hover:opacity-75
 }
 .contentContainer .newsContainer .newsItem h6 {
     @apply font-bold text-sm
@@ -57,4 +60,14 @@
 }
 .contentContainer .newsContainer .newsItem .newsDate {
     @apply text-xs opacity-60
+}
+
+@layer utilities {
+    .contentContainer {
+        .pokeballContainer {
+            > div {
+                animation-duration: 2.5s !important;
+            }
+        }
+    }
 }
