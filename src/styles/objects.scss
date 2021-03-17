@@ -1,0 +1,17 @@
+.rectangle {
+    @apply w-20 h-16 rounded-3xl
+}
+.dot {
+    @apply w-2 h-2 rounded-full bg-cadet-blue
+}
+
+@layer utilities {
+    .rectangle {
+        transform: rotate(25deg);
+        background: linear-gradient(
+        100deg,
+        rgba(176, 184, 199, 0) 5%,
+        rgba(176, 184, 199, 1) 100%
+    );
+    }
+}
