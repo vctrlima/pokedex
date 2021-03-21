@@ -1,17 +1,17 @@
 .contentContainer {
     @apply relative overflow-hidden
 }
-.contentContainer .upLayerContainer {
-    @apply bg-white-default rounded-b-3xl py-16 p-6
-}
 .contentContainer .pokeballContainer {
     @apply absolute -right-5 -top-16 opacity-20
+}
+.contentContainer .upLayerContainer {
+    @apply rounded-b-3xl pt-16 pb-7 p-6
 }
 .contentContainer .upLayerContainer .titleContainer {
     @apply pt-10
 }
 .contentContainer .upLayerContainer .titleContainer h2 {
-    @apply text-ebony-clay text-3xl font-bold
+    @apply text-3xl font-bold
 }
 .contentContainer .upLayerContainer .inputContainer {
     @apply w-full bg-porcelain text-center rounded-full p-0 mt-8 relative
@@ -37,6 +37,15 @@
 .contentContainer .upLayerContainer .gridContainer a.cardOption .cardPokeball {
     @apply absolute -right-2 opacity-40
 }
+.contentContainer .upLayerContainer .themeButtonContainer {
+    @apply flex justify-end mt-6
+}
+.contentContainer .upLayerContainer .themeButtonContainer .themeButton {
+    @apply w-10 h-10 rounded-full p-1.5 bg-porcelain shadow-sm outline-none
+}
+.contentContainer .upLayerContainer .themeButtonContainer .themeButton .themeButtonIcon {
+    @apply text-ebony-clay
+}
 .contentContainer .newsContainer {
     @apply py-8 p-6
 }
@@ -47,7 +56,7 @@
     @apply text-lg font-bold mb-2
 }
 .contentContainer .newsContainer .newsTitle a {
-    @apply text-indigo opacity-80 cursor-pointer hover:opacity-100 transition-all duration-200 ease-in-out
+    @apply opacity-80 cursor-pointer hover:opacity-100 transition-all duration-200 ease-in-out
 }
 .contentContainer .newsContainer .newsItem {
     @apply w-full flex items-center justify-between mt-4 cursor-pointer transition-all duration-200 ease-out hover:opacity-75

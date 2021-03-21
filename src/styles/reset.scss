@@ -8,5 +8,6 @@ a {
 @layer utilities {
     * {
         box-sizing: border-box;
+        transition: all 200ms ease-in-out;
     }
 }

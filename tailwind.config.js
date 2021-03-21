@@ -3,7 +3,7 @@ module.exports = {
         './pages/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
     ],
-    darkMode: false,
+    darkMode: 'class',
     theme: {
         fontFamily: {
             sans: [
@@ -28,12 +28,14 @@ module.exports = {
                 'trendy-pink': '#7C538C',
                 'coral-tree': '#B1736C',
                 'shamrock': '#48D0B0',
-                'carnation': '#F76363'
+                'carnation': '#F76363',
+                'mirage': '#1A232E'
             }
         },
     },
     variants: {
-        extend: {},
+        backgroundColor: ['hover', 'focus', 'dark'],
+        textColor: ['hover', 'focus', 'dark'],
     },
     plugins: [],
 };

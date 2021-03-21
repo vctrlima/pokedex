@@ -85,6 +85,12 @@
 .pokeballLg::before {
     @apply h-4
 }
+.pokeballLg.ebony-clay::before {
+    @apply bg-ebony-clay
+}
+.pokeballLg.ebony-clay::after {
+    @apply border-ebony-clay
+}
 
 @layer utilities {
     .pokeballSm,
