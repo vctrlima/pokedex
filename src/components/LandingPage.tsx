@@ -1,39 +1,26 @@
 import styles from "../styles/components/LandingPage.module.scss";
 import Link from "next/link"
+import SearchIcon from '@material-ui/icons/Search';
 
 export default function LandingPage() {
     return (
         <div className={styles.contentContainer}>
-            <div className={styles.dots}>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-            </div>
             <div className={styles.pokeballContainer}>
-                <div className="animate-spin pokeballMd"></div>
+                <div className="animate-spin pokeballLg"></div>
             </div>
             <div className={styles.upLayerContainer}>
                 <div className={styles.titleContainer}>
                     <h2>What Pokémon<br/>are you looking for?</h2>
                 </div>
                 <div className={styles.inputContainer}>
-                    <img src="./svg/icon-search.svg"/>
+                    <SearchIcon style={{ color: '#232C37' }} className={styles.searchIcon}/>
                     <input
                         type="text"
                         placeholder="Seach Pokémon, move, ability etc"
                     />
                 </div>
                 <div className={styles.gridContainer}>
-                    <Link href="./pokemons">
+                    <Link href="/pokedex">
                         <a className={`${styles.cardOption} bg-mountain-meadow`}>
                             <div className={styles.rectangleContainer}>
                                 <div className="rectangle"></div>

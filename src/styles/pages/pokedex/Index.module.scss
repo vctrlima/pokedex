@@ -1,0 +1,36 @@
+.contentContainer {
+    @apply w-full min-h-screen h-full bg-white-default p-6
+}
+.contentContainer .arrowBack {
+    @apply cursor-pointer bg-porcelain p-3 rounded-full fixed top-5 left-7 z-50
+}
+.contentContainer .title {
+    @apply text-ebony-clay text-3xl font-bold mt-14 mb-9
+}
+.contentContainer .list {
+    @apply grid grid-cols-2 gap-3
+}
+.contentContainer .list a .listItem {
+    @apply w-full h-32 rounded-3xl bg-opacity-80 hover:bg-opacity-100 cursor-pointer transition-all duration-200 ease-in-out overflow-hidden
+}
+.contentContainer .list a .listItem .itemContainer {
+    @apply h-full w-full p-4 relative
+}
+.contentContainer .list a .listItem .itemContainer .pokemonImg {
+    @apply absolute right-0 bottom-1 z-10
+}
+.contentContainer .list a .listItem .itemContainer .pokeballContainer {
+    @apply absolute -right-10 -bottom-10 z-0 opacity-25
+}
+.contentContainer .list a .listItem .itemContainer .pokemonId {
+    @apply absolute top-2 right-3.5 font-bold text-base opacity-25
+}
+.contentContainer .list a .listItem .itemContainer .pokemonInfo h3 {
+    @apply text-base text-white-default font-bold capitalize
+}
+.contentContainer .list a .listItem .itemContainer .pokemonInfo .pokemonType {
+    @apply text-xs rounded-full bg-white-default bg-opacity-20 text-center my-1.5 w-min px-3 py-1
+}
+.contentContainer .list a .listItem .itemContainer .pokemonInfo .pokemonType span {
+    @apply text-white font-bold
+}

@@ -67,6 +67,18 @@
 .pokeballMd::after {
     @apply w-14 h-14 top-9 left-9 border-8
 }
+.pokeballMd.porcelain {
+    @apply bg-porcelain
+}
+.pokeballMd.porcelain::after {
+    @apply bg-porcelain
+}
+.pokeballMd.shamrock::before {
+    @apply bg-shamrock
+}
+.pokeballMd.shamrock::after {
+    @apply border-shamrock
+}
 .pokeballLg {
     @apply w-48 h-48
 }

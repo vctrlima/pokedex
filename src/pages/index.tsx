@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <div className="font-sans text-ebony-clay">
             <Head>
-                <title>Pokédex | Home</title>
+                <title>Search for a Pokémon!</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <LandingPage />
