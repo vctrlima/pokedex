@@ -27,6 +27,8 @@ module.exports = {
                 'shakespeare': '#40A0CD',
                 'trendy-pink': '#7C538C',
                 'coral-tree': '#B1736C',
+                'shamrock': '#48D0B0',
+                'carnation': '#F76363'
             }
         },
     },
