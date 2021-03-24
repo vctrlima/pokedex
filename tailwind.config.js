@@ -29,7 +29,8 @@ module.exports = {
                 'coral-tree': '#B1736C',
                 'shamrock': '#48D0B0',
                 'carnation': '#F76363',
-                'mirage': '#1A232E'
+                'mirage': '#1A232E',
+                'oxford-blue': '#35414F'
             }
         },
     },

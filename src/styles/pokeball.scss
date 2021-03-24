@@ -79,6 +79,24 @@
 .pokeballMd.shamrock::after {
     @apply border-shamrock
 }
+.pokeballMd.ebony-clay::before {
+    @apply bg-ebony-clay
+}
+.pokeballMd.ebony-clay::after {
+    @apply border-ebony-clay
+}
+.pokeballMd.mirage::before {
+    @apply bg-mirage
+}
+.pokeballMd.mirage::after {
+    @apply border-mirage
+}
+.pokeballMd.oxford-blue::before {
+    @apply bg-oxford-blue
+}
+.pokeballMd.oxford-blue::after {
+    @apply border-oxford-blue
+}
 .pokeballLg {
     @apply w-48 h-48
 }

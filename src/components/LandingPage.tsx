@@ -2,17 +2,23 @@ import styles from "../styles/components/LandingPage.module.scss";
 import Link from "next/link";
 import SearchIcon from "@material-ui/icons/Search";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
-import { useTheme } from 'next-themes'
+import { useTheme } from "next-themes";
 
 export default function LandingPage() {
-    const { theme, setTheme } = useTheme()
+    const { theme, setTheme } = useTheme();
 
     return (
         <div className={`${styles.contentContainer} dark:bg-mirage`}>
             <div className={styles.pokeballContainer}>
-                <div className={`animate-spin pokeballLg ${theme === 'dark'? 'ebony-clay' : ''}`}></div>
+                <div
+                    className={`animate-spin pokeballLg ${
+                        theme === "dark" ? "ebony-clay" : ""
+                    }`}
+                ></div>
             </div>
-            <div className={`${styles.upLayerContainer} bg-white-default dark:bg-ebony-clay`}>
+            <div
+                className={`${styles.upLayerContainer} bg-white-default dark:bg-ebony-clay`}
+            >
                 <div className={styles.titleContainer}>
                     <h2 className="text-ebony-clay dark:text-white-default">
                         What Pokémon
@@ -94,12 +100,22 @@ export default function LandingPage() {
                     <button
                         aria-label="Toggle dark mode"
                         type="button"
-                        className={styles.themeButton}
-                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                        className={`${styles.themeButton} bg-porcelain dark:bg-oxford-blue`}
+                        onClick={() =>
+                            setTheme(theme === "dark" ? "light" : "dark")
+                        }
                     >
-                        <Brightness4Icon
-                            className={styles.themeButtonIcon}
-                        ></Brightness4Icon>
+                        {theme === "dark" ? (
+                            <Brightness4Icon
+                                style={{ color: "#F5F6F7" }}
+                                className={styles.themeButtonIcon}
+                            />
+                        ) : (
+                            <Brightness4Icon
+                                style={{ color: "#232C37" }}
+                                className={styles.themeButtonIcon}
+                            />
+                        )}
                     </button>
                 </div>
             </div>
