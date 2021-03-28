@@ -109,6 +109,12 @@
 .pokeballLg.ebony-clay::after {
     @apply border-ebony-clay
 }
+.pokeballLg.carnation::before {
+    @apply bg-carnation
+}
+.pokeballLg.carnation::after {
+    @apply border-carnation
+}
 
 @layer utilities {
     .pokeballSm,

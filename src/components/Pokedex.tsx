@@ -54,10 +54,15 @@ export default function Pokemons() {
                     {pokemonData.map((data) => {
                         return (
                             <Link
-                                href={`/pokedex/pokemon/${data.pokemon_species.url
-                                    .match(/\d+/g)
-                                    .map(Number)
-                                    .slice(1)}`}
+                                href={{
+                                    pathname: "/pokedex/pokemon/[id]",
+                                    query: {
+                                        id: data.pokemon_species.url
+                                            .match(/\d+/g)
+                                            .map(Number)
+                                            .slice(1),
+                                    },
+                                }}
                                 key={data.pokemon_species.url
                                     .match(/\d+/g)
                                     .map(Number)

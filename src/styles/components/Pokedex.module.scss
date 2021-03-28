@@ -20,7 +20,7 @@
     @apply flex justify-center items-center pt-5
 }
 .contentContainer .list a .listItem .itemContainer .pokemonImgContainer .pokemonImg {
-    @apply z-50
+    @apply z-10
 }
 .contentContainer .list a .listItem .itemContainer .pokeballContainer {
     @apply absolute -right-10 -bottom-10 z-0 opacity-25
