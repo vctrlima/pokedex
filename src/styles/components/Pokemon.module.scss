@@ -1,0 +1,51 @@
+.contentContainer {
+    @apply relative
+}
+.contentContainer .upperButtons {
+    @apply flex justify-between p-6 pb-2
+}
+.contentContainer .pokemonInfo {
+    @apply p-6 pb-5
+}
+.contentContainer .pokemonInfo .nameAndId {
+    @apply flex justify-between items-center
+}
+.contentContainer .pokemonInfo .nameAndId h2 {
+    @apply text-4xl font-bold capitalize
+}
+.contentContainer .pokemonInfo .nameAndId span {
+    @apply text-lg font-bold
+}
+.contentContainer .pokemonInfo .typeList {
+    @apply grid grid-cols-4 gap-3 mt-4
+}
+.contentContainer .pokemonInfo .typeList span {
+    @apply text-sm font-bold rounded-full capitalize text-center bg-white-default bg-opacity-20 hover:bg-opacity-30 py-1
+}
+.contentContainer .uplayerPokeball {
+    @apply relative w-full h-56 flex justify-center -mb-4 overflow-hidden
+}
+.contentContainer .uplayerPokeball .pokeballContainer {
+    @apply opacity-30
+}
+.contentContainer .pokemonDetails {
+    @apply bg-white-default h-full rounded-t-3xl z-50 p-6 pt-10
+}
+.contentContainer .pokemonDetails .pokemonImage {
+    @apply relative flex justify-center
+}
+.contentContainer .pokemonDetails .pokemonImage img {
+    @apply w-60 absolute inset-x-auto -top-60
+}
+
+@layer utilities {
+    .contentContainer {
+        .uplayerPokeball {
+            .pokeballContainer {
+                > div {
+                    animation-duration: 5000ms !important;
+                }
+            }
+        }
+    }
+}
