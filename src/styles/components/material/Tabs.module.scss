@@ -1,0 +1,24 @@
+.contentContainer {
+    @apply min-h-full
+}
+.contentContainer .matTabLabels {
+    @apply text-ebony-clay font-semibold text-sm
+}
+.contentContainer .tabContainer .infoCard {
+    @apply shadow-lg rounded-md p-4
+}
+.contentContainer .tabContainer .infoTable .infoItem {
+    @apply grid grid-cols-3 py-3 text-ebony-clay
+}
+.contentContainer .tabContainer .infoTable .infoItem .firstColumn span {
+    @apply font-semibold opacity-70
+}
+.contentContainer .tabContainer .infoTable .infoItem .secondColumn {
+    @apply col-span-2 text-center
+}
+.contentContainer .tabContainer .infoTable .infoItem .secondColumn span {
+    @apply font-normal
+}
+.contentContainer .tabContainer .breedingTitle {
+    @apply font-bold text-base text-ebony-clay mt-8 mb-4
+}

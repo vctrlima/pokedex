@@ -10,4 +10,7 @@ a {
         box-sizing: border-box;
         transition: all 200ms ease-in-out;
     }
+    button {
+        outline: none !important;
+    }
 }

@@ -3,22 +3,14 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Paper from "@material-ui/core/Paper";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import styles from "../styles/components/Pokemon.module.scss";
+import PokemonTabs from "./material/Tabs";
 
 const Pokemon = () => {
     const router = useRouter();
     const { theme, setTheme } = useTheme();
-
-    const [value, setValue] = React.useState(2);
-
-    const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-        setValue(newValue);
-    };
 
     const [pokemon, setPokemon] = useState(
         `${router.asPath.replace("/pokedex/pokemon/", "")}`
@@ -36,7 +28,7 @@ const Pokemon = () => {
             const res = await axios.get(url);
 
             toArray.push(res.data);
-            
+
             setPokemonData(toArray);
             setPokemonType(res.data.types);
 
@@ -53,6 +45,9 @@ const Pokemon = () => {
 
     return (
         <div className={`${styles.contentContainer} bg-carnation h-screen`}>
+            <div className={styles.rectangleContainer}>
+                <div className="rectangleLg"></div>
+            </div>
             <div className={styles.upperButtons}>
                 <Link href="/">
                     <a>
@@ -95,18 +90,7 @@ const Pokemon = () => {
                 <div className={styles.pokemonImage}>
                     <img src={pokemonImag} />
                 </div>
-                <div>
-                    <Paper square>
-                        <Tabs
-                            value={value}
-                            onChange={handleChange}
-                        >
-                            <Tab label="Active" />
-                            <Tab label="Disabled" />
-                            <Tab label="Active" />
-                        </Tabs>
-                    </Paper>
-                </div>
+                <PokemonTabs />
             </div>
         </div>
     );

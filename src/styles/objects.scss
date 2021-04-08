@@ -1,12 +1,16 @@
 .rectangle {
     @apply w-20 h-16 rounded-3xl
 }
+.rectangleLg {
+    @apply w-32 h-24 rounded-3xl
+}
 .dot {
     @apply w-2 h-2 rounded-full bg-cadet-blue
 }
 
 @layer utilities {
-    .rectangle {
+    .rectangle,
+    .rectangleLg {
         transform: rotate(25deg);
         background: linear-gradient(
         100deg,

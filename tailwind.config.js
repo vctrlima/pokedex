@@ -31,7 +31,10 @@ module.exports = {
                 'carnation': '#F76363',
                 'mirage': '#1A232E',
                 'oxford-blue': '#35414F'
-            }
+            },
+            screens: {
+				'lg': '992px'
+			},
         },
     },
     variants: {

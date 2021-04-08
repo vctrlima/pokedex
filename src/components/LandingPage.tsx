@@ -9,6 +9,7 @@ export default function LandingPage() {
 
     return (
         <div className={`${styles.contentContainer} dark:bg-mirage`}>
+            <img className={styles.pikachuImg} src="/img/pikachu.png" alt="Pikachu!"/>
             <div className={styles.pokeballContainer}>
                 <div
                     className={`animate-spin pokeballLg ${
@@ -19,22 +20,24 @@ export default function LandingPage() {
             <div
                 className={`${styles.upLayerContainer} bg-white-default dark:bg-ebony-clay`}
             >
-                <div className={styles.titleContainer}>
-                    <h2 className="text-ebony-clay dark:text-white-default">
-                        What Pokémon
-                        <br />
-                        are you looking for?
-                    </h2>
-                </div>
-                <div className={styles.inputContainer}>
-                    <SearchIcon
-                        style={{ color: "#232C37" }}
-                        className={styles.searchIcon}
-                    />
-                    <input
-                        type="text"
-                        placeholder="Seach Pokémon, move, ability etc"
-                    />
+                <div>
+                    <div className={styles.titleContainer}>
+                        <h2 className="text-ebony-clay dark:text-white-default">
+                            What Pokémon
+                            <br />
+                            are you looking for?
+                        </h2>
+                    </div>
+                    <div className={styles.inputContainer}>
+                        <SearchIcon
+                            style={{ color: "#232C37" }}
+                            className={styles.searchIcon}
+                        />
+                        <input
+                            type="text"
+                            placeholder="Seach Pokémon, move, ability etc"
+                        />
+                    </div>
                 </div>
                 <div className={styles.gridContainer}>
                     <Link href="/pokedex">
