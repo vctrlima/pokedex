@@ -7,46 +7,46 @@
 .contentContainer .pokeballContainer {
     @apply absolute -right-5 -top-16 opacity-20
 }
-.contentContainer .upLayerContainer {
+.contentContainer .upLayerContainer > div {
     @apply rounded-b-3xl pt-16 pb-7 p-6
 }
-.contentContainer .upLayerContainer .titleContainer {
+.contentContainer .upLayerContainer > div .titleContainer {
     @apply pt-10
 }
-.contentContainer .upLayerContainer .titleContainer h2 {
+.contentContainer .upLayerContainer > div .titleContainer h2 {
     @apply text-3xl font-bold
 }
-.contentContainer .upLayerContainer .inputContainer {
+.contentContainer .upLayerContainer > div .inputContainer {
     @apply w-full bg-transparent text-center rounded-full p-0 mt-8 relative
 }
-.contentContainer .upLayerContainer .inputContainer .searchIcon {
+.contentContainer .upLayerContainer > div .inputContainer .searchIcon {
     @apply w-5 h-5 absolute top-2.5 left-3 mt-px
 }
-.contentContainer .upLayerContainer .inputContainer input {
+.contentContainer .upLayerContainer > div .inputContainer input {
     @apply w-full py-2 pr-0 pl-9 rounded-full bg-porcelain outline-none
 }
-.contentContainer .upLayerContainer .gridContainer {
+.contentContainer .upLayerContainer > div .gridContainer {
     @apply grid grid-cols-2 gap-3 mt-10 max-h-72
 }
-.contentContainer .upLayerContainer .gridContainer a.cardOption {
+.contentContainer .upLayerContainer > div .gridContainer a.cardOption {
     @apply flex items-center p-4 w-full h-20 rounded-3xl relative transition-all duration-200 ease-in-out cursor-pointer overflow-hidden opacity-80 hover:opacity-100
 }
-.contentContainer .upLayerContainer .gridContainer a.cardOption .rectangleContainer {
+.contentContainer .upLayerContainer > div .gridContainer a.cardOption .rectangleContainer {
     @apply absolute top-0 left-0 opacity-20
 }
-.contentContainer .upLayerContainer .gridContainer a.cardOption h4 {
+.contentContainer .upLayerContainer > div .gridContainer a.cardOption h4 {
     @apply text-white-default text-base font-bold
 }
-.contentContainer .upLayerContainer .gridContainer a.cardOption .cardPokeball {
+.contentContainer .upLayerContainer > div .gridContainer a.cardOption .cardPokeball {
     @apply absolute -right-2 opacity-40
 }
-.contentContainer .upLayerContainer .themeButtonContainer {
+.contentContainer .upLayerContainer > div .themeButtonContainer {
     @apply flex justify-end mt-6
 }
-.contentContainer .upLayerContainer .themeButtonContainer .themeButton {
+.contentContainer .upLayerContainer > div .themeButtonContainer .themeButton {
     @apply w-10 h-10 rounded-full p-1.5 shadow-sm outline-none
 }
-.contentContainer .upLayerContainer .themeButtonContainer .themeButton .themeButtonIcon {
+.contentContainer .upLayerContainer > div .themeButtonContainer .themeButton .themeButtonIcon {
     @apply text-ebony-clay
 }
 .contentContainer .newsContainer {
@@ -73,6 +73,9 @@
 .contentContainer .newsContainer .newsItem .newsDate {
     @apply text-xs opacity-60
 }
+.contentContainer .newsContainer .newsItem .newsImg {
+    @apply w-28 h-20 rounded-3xl opacity-80 bg-cinnabar
+}
 
 @layer utilities {
     .contentContainer {
@@ -92,25 +95,73 @@
 }
 
 @screen lg {
-    .contentContainer {
-        @apply flex justify-center items-center h-screen bg-white-default
-    }
-    .contentContainer .pikachuImg {
-        @apply absolute -left-24 -bottom-4 block z-50
-    }
     .contentContainer .upLayerContainer {
-        @apply w-1/2 bg-transparent pt-0
+        @apply w-full h-screen flex justify-center items-center
     }
-    .contentContainer .upLayerContainer .titleContainer {
-        @apply pt-0
+    .contentContainer .upLayerContainer > div {
+        @apply w-3/5
     }
-    .contentContainer .upLayerContainer .gridContainer a.cardOption {
-        @apply h-28
+    .contentContainer .upLayerContainer > div .titleContainer h2 {
+        @apply text-7xl text-center
     }
-    .contentContainer .upLayerContainer .themeButtonContainer {
-        @apply absolute right-4 bottom-4
+    .contentContainer .upLayerContainer > div .gridContainer {
+        @apply mx-auto grid-cols-3 grid-rows-2 max-h-full
+    }
+    .contentContainer .upLayerContainer > div .gridContainer a.cardOption {
+        @apply w-full h-36 border-2 border-transparent
+    }
+    .contentContainer .upLayerContainer > div .gridContainer a.cardOption.mountainMeadow {
+        @apply hover:border-mountain-meadow
+    }
+    .contentContainer .upLayerContainer > div .gridContainer a.cardOption.cinnabar {
+        @apply hover:border-cinnabar
+    }
+    .contentContainer .upLayerContainer > div .gridContainer a.cardOption.indigo {
+        @apply hover:border-indigo
+    }
+    .contentContainer .upLayerContainer > div .gridContainer a.cardOption.buttercup {
+        @apply hover:border-buttercup
+    }
+    .contentContainer .upLayerContainer > div .gridContainer a.cardOption.trendyPink {
+        @apply hover:border-trendy-pink
+    }
+    .contentContainer .upLayerContainer > div .gridContainer a.cardOption.coralTree {
+        @apply hover:border-coral-tree
+    }
+    .contentContainer .upLayerContainer > div .gridContainer a.cardOption h4 {
+        @apply w-full text-center text-2xl
+    }
+    .contentContainer .upLayerContainer > div .gridContainer a.cardOption .cardPokeball {
+        @apply hidden
+    }
+    .contentContainer .upLayerContainer > div .themeButtonContainer {
+        @apply fixed right-4 bottom-4
     }
     .contentContainer .newsContainer {
-        @apply hidden
+        @apply w-full flex justify-center
+    }
+    .contentContainer .newsContainer > div {
+        @apply w-3/5
+    }
+    .contentContainer .newsContainer > div .newsTitle h3 {
+        @apply text-2xl mb-0
+    }
+    .contentContainer .newsContainer > div .newsTitle a {
+        @apply flex justify-items-end items-end
+    }
+    .contentContainer .newsContainer > div .newsItem {
+        @apply h-28
+    }
+    .contentContainer .newsContainer > div .newsItem .newsImg {
+        @apply w-1/3 h-full rounded-l-none rounded-r-3xl bg-transparent bg-gradient-to-r from-transparent to-cinnabar
+    }
+    .contentContainer .githubRepo {
+        @apply w-full mt-8 pb-12 flex justify-center align-top
+    }
+    .contentContainer .githubRepo a {
+        @apply py-4 px-6 rounded-xl shadow-md -mt-7 hover:shadow-2xl font-semibold border-2 border-transparent hover:border-white-default
+    }
+    .contentContainer .githubRepo a .githubIcon {
+        @apply ml-3
     }
 }
