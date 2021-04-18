@@ -164,7 +164,7 @@ export default function LandingPage() {
             </div>
             <div className={`${styles.githubRepo} bg-white-default dark:bg-transparent`}>
                 <a
-                    href="https://github.com/vctrlima/pokedex-with-pokeapi"
+                    href="https://github.com/vctrlima/pokedex"
                     target="_blank"
                     className="text-ebony-clay dark:text-white-default bg-white-default dark:bg-ebony-clay"
                 >
