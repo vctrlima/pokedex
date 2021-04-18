@@ -36,7 +36,7 @@ export default function LandingPage() {
                             />
                             <input
                                 type="text"
-                                placeholder="Seach Pokémon, move, ability etc"
+                                placeholder="Search Pokémon, move, ability etc"
                             />
                         </div>
                     </div>

@@ -152,6 +152,12 @@
     .contentContainer .newsContainer > div .newsItem {
         @apply h-28
     }
+    .contentContainer .newsContainer > div .newsItem h6 {
+        @apply text-lg
+    }
+    .contentContainer .newsContainer > div .newsItem span {
+        @apply text-base
+    }
     .contentContainer .newsContainer > div .newsItem .newsImg {
         @apply w-1/3 h-full rounded-l-none rounded-r-3xl bg-transparent bg-gradient-to-r from-transparent to-cinnabar
     }
